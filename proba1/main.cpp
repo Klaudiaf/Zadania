@@ -1,5 +1,5 @@
 /*
-Losowac liczby ca³kowite az do momentu, gdy dwie kolejne liczby beda równe odpowiednio dwóm
+Losowac liczby caï¿½kowite az do momentu, gdy dwie kolejne liczby beda rï¿½wne odpowiednio dwï¿½m
 pierwszym. Wydrukowac sume parzystych liczb tego ciagu (wliczajac w to dwie ostatnie). Przyjac dla
 uproszczenia, ze w ciagu sa co najmniej 4 liczby. Program napisac bez uzycia tablic.
 */
@@ -12,7 +12,7 @@ using namespace std;
 
 int main()
 {
-    int x, y, a, przedost, ost;
+    int x, y, przedost, ost;
     int sumap=0;
 
     srand(time(0));
@@ -21,9 +21,8 @@ int main()
     cout << x << endl;
     y = 0+(5-0)*(rand())/double(RAND_MAX);
     cout << y << endl;
-    a = 0+(5-0)*(rand())/double(RAND_MAX);
-    cout << a << endl;
-    ost = a;
+    ost = 0+(5-0)*(rand())/double(RAND_MAX);
+    cout << ost << endl;
 
     if (x%2==0)
     sumap = sumap + x;
@@ -31,18 +30,17 @@ int main()
     if (y%2==0)
     sumap = sumap + y;
 
-    if (a%2==0)
-    sumap = sumap +a;
+    if (ost%2==0)
+    sumap = sumap +ost;
 
    do {
-       przedost = a;
-       a =0+(5-0)*(rand())/double(RAND_MAX);
-       cout << a;
-       ost = a;
+       przedost = ost;
+       ost =0+(5-0)*(rand())/double(RAND_MAX);
+       cout << ost;
        cout << endl;
 
-       if (a%2==0)
-       sumap = sumap + a;
+       if (ost%2==0)
+       sumap = sumap + ost;
    }
    while ( !(przedost == x && ost == y));
 
